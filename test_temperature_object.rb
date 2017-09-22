@@ -1,12 +1,15 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './temperature.rb'
+require 'pry'
 
 class TestTemperature < MiniTest::Test
+
 
   def test_initialize_fahrenheit
     assert_equal 50, Temperature.new({:f => 50}).to_fahrenheit
   end
+
 
   def test_convert_celsius_at_freezing
     assert_equal 0, Temperature.new({:f => 32}).to_celsius
